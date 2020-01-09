@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clock</title>
+</head>
+<body>
+<header><h1>LOLCAT CLOCK</h1></header>
+<h4>I can haz time??<br>
+<span id = "clock"></span></h4>
+
+
+<script>
+	var currentTime = new Date(),
+      hours = currentTime.getHours(),
+      minutes = currentTime.getMinutes();
+
+	if (minutes < 10) {
+	 minutes = "0" + minutes;
+  }
+
+	var suffix = "AM";
+	if (hours >= 12) {
+    suffix = "PM";
+    hours = hours - 12;
+	}
+	if (hours == 0) {
+	 hours = 12;
+	}
+
+	//document.write(hours + ":" + minutes + " " + suffix)
+
+var clockTime = hours + ':' + minutes + suffix;
+ 
+    clock.innerText = clockTime;
+
+
+</script>
+<br>
+
+<img src="/home/keerthi/Downloads/cat.jpeg">
+<br>
+<br>
+SET WAKE UP TIME
+<select id="wakeuptime">
+	<option value=1>1am-2am</option>
+	<option value=2>2am-3am</option>
+	<option value=3>3am-4am</option>
+	<option value=4>4am-5am</option>
+	<option value=5>5am-6am</option>
+	<option value=6>6am-7am</option>
+	<option value=7>7am-8am</option>
+	<option value=8>8am-9am</option>
+	<option value=9>9am-10am</option>
+</select>
+<br>
+<br>
+SET LUNCH TIME
+<select id="lunchtime">
+	<option value="1">12pm-1pm</option>
+	<option value="1">1pm-2pm</option>
+	<option value="1">2pm-3pm</option>
+</select>
+<br>
+<br>
+SET NAP TIME
+<select id="naptime">
+	<option value="1">3pm-4pm</option>
+	<option value="1">4pm-5pm</option>
+	<option value="1">5pm-6pm</option>
+</select>
+<button id="partytime">PARTY TIME</button>
+
+</body>
+</html>
